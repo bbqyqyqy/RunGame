@@ -138,6 +138,9 @@ https://assetstore.unity.com/packages/templates/tutorials/3d-game-kit-115747
 对跑酷道路上的障碍物、卡牌和怪兽出现频率等的设计
 
 针对跑酷的障碍：
+
+【希望可以以“何种障碍 - 渡过/躲避方法format一下”，希望可以整体具体一些，即看到描述可以想到如何去coding】
+
 1. 单跳可过 溪流，横木，
 2. 双跳可过 更高的房屋，远岛
 3. 一定角度左右可过 空中绳索 藤蔓
