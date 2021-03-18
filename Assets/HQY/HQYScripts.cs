@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class HQYScripts : MonoBehaviour {
     private CollisionFlags flags;
-    float forwardSpeed = 15F;
+    public float forwardSpeed;// = 15F;
+    public float forwardSpeedw;
     float gravity = 8F;
     float jumpSpeed = 10F;
     int blood = 5;
-    int horizontalSpeed = 8;
+    public int horizontalSpeed = 8;
 
     Vector3 moveDir = Vector3.zero;
     CharacterController controller;
@@ -49,8 +50,8 @@ public class HQYScripts : MonoBehaviour {
             print("---GetKeyDown: KeyCode.W");
             anim.SetInteger("condition", 1);
             moveDir = new Vector3(0, 0, 1);
-            forwardSpeed = 25;
-            moveDir *= forwardSpeed;
+            forwardSpeedw = 25;
+            moveDir *= forwardSpeedw;
         }
         if (Input.GetKeyUp(KeyCode.W)) {
             print("---GetKeyUp: KeyCode.W");
@@ -59,13 +60,13 @@ public class HQYScripts : MonoBehaviour {
             forwardSpeed = 15;
             moveDir *= forwardSpeed;
         }
-        if (Input.GetKeyDown(KeyCode.Space) && !anim.GetBool("jumping")) {
+        if (Input.GetKeyDown(KeyCode.K) && !anim.GetBool("jumping")) {
             print("---GetKeyDown: KeyCode.Space");
             anim.SetBool("jumping", true);
             moveDir.y = jumpSpeed;
             anim.SetInteger("condition", 2);
         }
-        if (Input.GetMouseButtonDown(0)) { // left mouse button
+        if (Input.GetKeyDown(KeyCode.J)) {      //GetMouseButtonDown(0)) { // left mouse button
             print("---left mouse button");
             Attacking();
         }
