@@ -22,7 +22,7 @@ public class RoadManage : MonoBehaviour
     {
         roadCount++;
         int type = Random.Range(0, roads.Length);
-        GameObject newRoad = Instantiate(roads[type], new Vector3(-8, 1, roadCount * 115 - 90), Quaternion.identity) as GameObject;
+        GameObject newRoad = Instantiate(roads[type], new Vector3(0, 0, roadCount * 115 - 110), Quaternion.identity) as GameObject;
         road1 = road2;
         road2 = newRoad.GetComponent<Road>();
         Debug.Log("road gener");
